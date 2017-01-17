@@ -1,0 +1,289 @@
+{% extends "::frontBase.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="fullscreenbanner-container">
+            <div class="fullscreenbanner">
+                <ul>
+                    <!-- SLIDE 1 -->
+                    <li class="revolution-mch-1" data-transition="curtain-1" data-slotamount="5" data-masterspeed="700" data-title="Slide 1">
+                        <!-- MAIN IMAGE -->
+                        <img src="{{ asset('img/bicos.jpg')}}" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+
+                        <!-- LAYERS -->
+                        <div class="tp-caption rs-caption-1 sft start"
+                             data-x="center"
+                             data-hoffset="0"
+                             data-y="100"
+                             data-speed="800"
+                             data-start="2000"
+                             data-easing="Back.easeInOut"
+                             data-endspeed="300">
+                            <strong>Produits Bio</strong>
+                        </div>
+
+                        <!-- LAYER -->
+                        <div class="tp-caption rs-caption-2 sft"
+                             data-x="center"
+                             data-hoffset="0"
+                             data-y="200"
+                             data-speed="1000"
+                             data-start="3000"
+                             data-easing="Power4.easeOut"
+                             data-endspeed="300"
+                             data-endeasing="Power1.easeIn"
+                             data-captionhidden="off"
+                             style="z-index: 6">
+                            Creative freedom matters user experience.<br>
+                            We minimize the gap between technology and its audience.
+                        </div>
+
+                        <!-- LAYER -->
+                        <div class="tp-caption rs-caption-3 sft"
+                             data-x="center"
+                             data-hoffset="0"
+                             data-y="360"
+                             data-speed="800"
+                             data-start="3500"
+                             data-easing="Power4.easeOut"
+                             data-endspeed="300"
+                             data-endeasing="Power1.easeIn"
+                             data-captionhidden="off"
+                             style="z-index: 6">
+                            <span class="page-scroll"><a href="" class="btn-u btn-brd btn-brd-hover btn-u-light">Achetez</a></span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="tp-bannertimer tp-bottom"></div>
+                <div class="tp-dottedoverlay twoxtwo"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--  About Section -->
+    <section id="about" class="about-section section-first">
+        <div class="block-v1 margin-top-20">
+            <div class="container">
+                <div class="row content-boxes-v3">
+                    <div class="col-md-4 md-margin-bottom-30">
+                        <i class="icon-custom rounded-x icon-bg-dark fa fa-lightbulb-o"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Creative Desgin</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 md-margin-bottom-30">
+                        <i class="icon-custom rounded-x icon-bg-dark fa fa-flask"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Web Development</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="icon-custom rounded-x icon-bg-dark fa fa-bolt"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Online Marketing</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+        <div class="about-image bg-grey">
+            <div class="container">
+                <div class="title-v1">
+                    <h1>We are Unify Agency</h1>
+                    <p>Unify <strong>creative</strong> technology company providing key digital services. <br> 
+                        Focused on helping our clients to build a <strong>successful</strong> business on web and mobile.</p>                
+                </div>
+            </div>
+        </div>        
+    </section>
+
+    <section id="products" class="products-section">
+        <div class="container content-md">
+            <div class="row margin-bottom-40">
+                <div class="col-md-2 col-sm-6" style="width: 20%;">
+                    <div class="pricing hover-effect">
+                        <div class="pricing-head">
+                            <h3 style="background: #CD7F32 ">Bronze</h3>
+                            <h4 style="color: #CD7F32;">300<i>DT</i> <span>Par an</span></h4>
+                        </div>
+                        <ul class="pricing-content list-unstyled">
+                            <li><i class="fa fa-gift"></i> Free customisation</li>
+                            <li><i class="fa fa-inbox"></i> 24 hour support<span></span></li>
+                            <li><i class="fa fa-globe"></i> 10 GB Disckspace<span></span></li>
+                            <li><i class="fa fa-cloud-upload">  </i> Cloud Storage<span></span></li>
+                            <li><i class="fa fa-umbrella"></i> Online Protection<span></span></li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <p>Les frais d'inscription sont: 50DT</p>
+                            <a class="btn-u" href="#" style="background: #CD7F32; text-shadow: none;">Inscription</a>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6" style="width: 20%;">
+                    <div class="pricing hover-effect">
+                        <div class="pricing-head">
+                            <h3 style="background: #c0c0c0 ">Argent</h3>
+                            <h4 style="color: #c0c0c0;">600<i>DT</i> <span>Par an</span></h4>
+                        </div>
+                        <ul class="pricing-content list-unstyled">
+                            <li><i class="fa fa-gift"></i> Free customisation</li>
+                            <li><i class="fa fa-inbox"></i> 24 hour support<span></span></li>
+                            <li><i class="fa fa-globe"></i> 10 GB Disckspace<span></span></li>
+                            <li><i class="fa fa-cloud-upload">  </i> Cloud Storage<span></span></li>
+                            <li><i class="fa fa-umbrella"></i> Online Protection<span></span></li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <p>Les frais d'inscription sont: 50DT</p>
+                            <a class="btn-u" href="#" style="background: #c0c0c0; text-shadow: none;">Inscription</a>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6" style="width: 20%;">
+                    <div class="pricing hover-effect">
+                        <div class="pricing-head">
+                            <h3 style="background: #D4AF37 ">Or</h3>
+                            <h4  style="color: #D4AF37;">1000<i>DT</i> <span>Par an</span></h4>
+                        </div>
+                        <ul class="pricing-content list-unstyled">
+                            <li><i class="fa fa-gift"></i> Free customisation</li>
+                            <li><i class="fa fa-inbox"></i> 24 hour support<span></span></li>
+                            <li><i class="fa fa-globe"></i> 10 GB Disckspace<span></span></li>
+                            <li><i class="fa fa-cloud-upload">  </i> Cloud Storage<span></span></li>
+                            <li><i class="fa fa-umbrella"></i> Online Protection<span></span></li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <p>Les frais d'inscription sont: 50DT</p>
+                            <a class="btn-u" href="#" style="background: #D4AF37; text-shadow: none;">Inscription</a>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6" style="width: 20%;">
+                    <div class="pricing hover-effect">
+                        <div class="pricing-head">
+                            <h3 style="background: #928e87 ">Platine</h3>
+                            <h4 style="color: #928e87;">2000<i>DT</i> <span>Par an</span></h4>
+                        </div>
+                        <ul class="pricing-content list-unstyled">
+                            <li><i class="fa fa-gift"></i> Free customisation</li>
+                            <li><i class="fa fa-inbox"></i> 24 hour support<span></span></li>
+                            <li><i class="fa fa-globe"></i> 10 GB Disckspace<span></span></li>
+                            <li><i class="fa fa-cloud-upload">  </i> Cloud Storage<span></span></li>
+                            <li><i class="fa fa-umbrella"></i> Online Protection<span></span></li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <p>Les frais d'inscription sont: 50DT</p>
+                            <a class="btn-u" href="#" style="background: #928e87; text-shadow: none;">Inscription</a>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6" style="width: 20%;">
+                    <div class="pricing hover-effect">
+                        <div class="pricing-head">
+                            <h3 style="background: #B25162 ">Luxe</h3>
+                            <h4 style="color: #B25162;">4000<i>DT</i> <span>Par an</span></h4>
+                        </div>
+                        <ul class="pricing-content list-unstyled">
+                            <li><i class="fa fa-gift"></i> Free customisation</li>
+                            <li><i class="fa fa-inbox"></i> 24 hour support<span></span></li>
+                            <li><i class="fa fa-globe"></i> 10 GB Disckspace<span></span></li>
+                            <li><i class="fa fa-cloud-upload">  </i> Cloud Storage<span></span></li>
+                            <li><i class="fa fa-umbrella"></i> Online Protection<span></span></li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <p>Les frais d'inscription sont: 50DT</p>
+                            <a class="btn-u" href="#" style="background: #B25162; text-shadow: none;">Inscription</a>
+                        </div>                    
+                    </div>
+                </div>
+            </div><!--/row-->
+        </div> 
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contacts-section">
+        <div class="container content-lg">
+            <div class="title-v1">
+                <h2>Contact Us</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
+                    It has been the industry's standard dummy text.</p>
+            </div>
+
+            <div class="row contacts-in">
+                <div class="col-md-6 md-margin-bottom-40">
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-home"></i> 5B Streat, City 50987 New Town US</li>
+                        <li><i class="fa fa-phone"></i> 1(800) 220 084</li>
+                        <li><i class="fa fa-envelope"></i> <a href="info@example.com">info@example.com</a></li>
+                        <li><i class="fa fa-globe"></i> <a href="http://htmlstream.com">www.htmlstream.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <form action="assets/php/sky-forms-pro/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form contact-style">
+                        <fieldset>
+                            <label>Name</label>
+                            <div class="row">
+                                <div class="col-md-7 margin-bottom-20 col-md-offset-0">
+                                    <div>
+                                        <input type="text" name="name" id="name" class="form-control">
+                                    </div>
+                                </div>                
+                            </div>
+
+                            <label>Email <span class="color-red">*</span></label>
+                            <div class="row">
+                                <div class="col-md-7 margin-bottom-20 col-md-offset-0">
+                                    <div>
+                                        <input type="text" name="email" id="email" class="form-control">
+                                    </div>
+                                </div>                
+                            </div>
+
+                            <label>Message</label>
+                            <div class="row">
+                                <div class="col-md-11 margin-bottom-20 col-md-offset-0">
+                                    <div>
+                                        <textarea rows="8" name="message" id="message" class="form-control"></textarea>
+                                    </div>
+                                </div>                
+                            </div>
+
+                            <p><button type="submit" class="btn-u btn-brd btn-brd-hover btn-u-dark">Send Message</button></p>
+                        </fieldset>
+
+                        <div class="message">
+                            <i class="rounded-x fa fa-check"></i>
+                            <p>Your message was successfully sent!</p>
+                        </div>
+                    </form> 
+                </div>
+            </div>            
+        </div>
+
+        <div class="copyright-section">
+            <p>2014 &copy; All Rights Reserved. Unify Theme by <a target="_blank" href="https://twitter.com/htmlstream">Htmlstream</a></p>
+            <ul class="social-icons">
+                <li><a href="#" data-original-title="Facebook" class="social_facebook rounded-x"></a></li>
+                <li><a href="#" data-original-title="Twitter" class="social_twitter rounded-x"></a></li>
+                <li><a href="#" data-original-title="Goole Plus" class="social_googleplus rounded-x"></a></li>
+                <li><a href="#" data-original-title="Pinterest" class="social_pintrest rounded-x"></a></li>
+                <li><a href="#" data-original-title="Linkedin" class="social_linkedin rounded-x"></a></li>
+            </ul>
+            <span class="page-scroll"><a href="#intro"><i class="fa fa-angle-double-up back-to-top"></i></a></span>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock javascripts %}

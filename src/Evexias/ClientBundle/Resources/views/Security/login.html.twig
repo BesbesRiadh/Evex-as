@@ -1,0 +1,54 @@
+{% extends '::frontBase.html.twig' %}
+
+{% block subtitle %}{{'Authentification'|trans}}-{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <!--=== Content Part ===-->
+    <div class="log-reg-v3 content-md">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-3 margin-top-20">
+                    {% set formId = form.vars.id %}
+                    {{ form_start(form, {'attr' : { 'id' : formId ,'class': 'log-reg-block sky-form'}} ) }}
+                    {% if error %}
+                        <br/>
+                        <div class="has-error" style="left: 50%;" align="center">
+                            Login ou mot de passe incorrect
+                        </div>
+                    {% endif %}
+                    <h2>Connectez-vous</h2>
+                        <section>
+                            <label class="input login-input">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        {{ form_widget(form.login) }}
+                                </div>
+                            </label>
+                        </section>
+                        <section>
+                            <label class="input login-input no-border-top">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                        {{ form_widget(form.password) }}
+                                </div>    
+                            </label>
+                        </section>
+                    {{ form_rest(form) }}
+                    <footer>
+                        <button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Connexion </button>
+                    </footer>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent()}}
+{% endblock %}
+

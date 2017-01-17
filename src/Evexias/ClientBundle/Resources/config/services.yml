@@ -1,0 +1,24 @@
+parameters:
+    mailService.class: Evexias\ClientBundle\Services\MailService
+    webservice_user_provider.class: Evexias\ClientBundle\Security\WebServiceUserProvider
+    LogoutListener.class: Evexias\ClientBundle\Service\LogoutListenerService
+
+services:
+        
+    mailService:
+        class: %mailService.class%
+        arguments: ['@service_container']
+        
+    mail_logger:
+        class: Symfony\Bridge\Monolog\Logger
+        arguments: [mail]
+        calls:
+            - [pushHandler, ['@mail_handler']]
+            
+    mail_handler:
+        class: Monolog\Handler\RotatingFileHandler
+        arguments: [%kernel.logs_dir%/%kernel.environment%.mailer.log, 10] 
+        
+    webservice_user_provider:
+        class: %webservice_user_provider.class%
+        arguments: ['@service_container']

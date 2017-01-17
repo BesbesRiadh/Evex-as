@@ -1,0 +1,44 @@
+security:
+    encoders:
+        Evexias\ClientBundle\Security\WebServiceUser:
+            algorithm:        md5
+            encode_as_base64: false
+            iterations:       1
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_ADMIN
+        ROLE_USER:       ROLE_USER
+
+    providers:
+        webservice_user:
+            id: webservice_user_provider
+
+    firewalls:
+        login:
+            pattern:  ^/login$
+            security: false
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js|favicon.ico|ico)/
+            security: false
+        secured_area:
+            pattern: ^/
+            anonymous: ~
+            logout:
+                path:   /logout
+                target: /
+            form_login:
+                login_path: /login
+                check_path:  /login_check
+                username_parameter: login[login]
+                password_parameter: login[password]
+                csrf_parameter: login[_token]
+#                csrf_token_generator: security.csrf.token_manager
+                provider: webservice_user
+                csrf_token_id: authentication
+                # On success
+                always_use_default_target_path: true
+                default_target_path: admin
+
+    access_control:
+         - { path: ^/admin, roles: [ROLE_ADMIN, ROLE_USER] }
+         - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }

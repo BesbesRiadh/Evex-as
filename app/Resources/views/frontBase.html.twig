@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="fr" class="ie8"> <![endif]-->
+
+<!--[if IE 9]> <html lang="fr" class="ie9"> <![endif]-->
+
+<!--[if !IE]><!--> <html lang="fr"> <!--<![endif]-->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Besbes Riadh">
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        <title>{% block title %}{% block subtitle %}{% endblock %}Evexias{% endblock %}</title>
+
+        {% block stylesheets %}
+            <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+            <!-- CSS Global Compulsory -->
+            <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/css/one.style.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/css/shop.style.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/css/shop.blocks.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/css/shop.plugins.css') }}">
+
+            <link rel="stylesheet" href="{{ asset('assets/css/footers/footer-v7.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/css/headers/header-v7.css') }}">
+
+            <!-- CSS Implementing Plugins -->
+            <link rel="stylesheet" href="{{ asset('assets/plugins/animate.css') }}">    
+            <link rel="stylesheet" href="{{ asset('assets/plugins/line-icons/line-icons.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/plugins/font-awesome/css/font-awesome.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/plugins/pace/pace-flash.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/plugins/owl-carousel/owl.carousel.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/plugins/revolution-slider/rs-plugin/css/settings.css') }}" type="text/css" media="screen">
+            <link rel="stylesheet" href="{{ asset('assets/css/pages/page_pricing.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/css/pages/log-reg-v3.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css') }}">
+            <!-- CSS Customization -->
+            <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+
+        {% endblock %}
+        <script type="text/javascript" src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+    </head>
+
+    <body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery">
+        {% block header %}
+            {% include '::frontNavBar.html.twig' %}
+        {% endblock %}
+        {% block content %} {% endblock %}
+
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/plugins/jquery/jquery-migrate.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+
+            <script src="{{ asset('assets/plugins/smoothScroll.js') }}"></script>
+            <script src="{{ asset('assets/plugins/jquery.easing.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/pace/pace.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/jquery.parallax.js') }}"></script>
+            <script src="{{ asset('assets/plugins/counter/waypoints.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/counter/jquery.counterup.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/owl-carousel/owl.carousel.js') }}"></script>
+            <script src="{{ asset('assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js') }}"></script>
+
+            <script src="{{ asset('assets/js/one.app.js') }}"></script>
+            <script src="{{ asset('assets/js/plugins/pace-loader.js') }}"></script>
+            <script src="{{ asset('assets/js/plugins/owl-carousel.js') }}"></script>
+            <script src="{{ asset('assets/js/plugins/revolution-slider.js') }}"></script>
+            <script src="{{ asset('assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js') }}"></script>
+
+            <script>
+                jQuery(document).ready(function () {
+                    App.init();
+                    App.initCounter();
+                    App.initParallaxBg();
+                    OwlCarousel.initOwlCarousel();
+                    RevolutionSlider.initRSfullScreen();
+                });
+            </script>
+        {% endblock %}
+    </body>
+</html>
+

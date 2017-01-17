@@ -1,0 +1,5 @@
+User:
+    resource: "@EvexiasUserBundle/Controller/UserController.php"
+    type:     annotation
+
+

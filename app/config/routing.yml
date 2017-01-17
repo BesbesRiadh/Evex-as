@@ -1,0 +1,12 @@
+evexias_client:
+    resource: "@EvexiasClientBundle/Resources/config/routing.yml"
+    prefix:   /
+
+evexias_front_end:
+    resource: "@EvexiasFrontEndBundle/Resources/config/routing.yml"
+    prefix:   /
+
+evexias_user:
+    resource: "@EvexiasUserBundle/Resources/config/routing.yml"
+    prefix:   /
+

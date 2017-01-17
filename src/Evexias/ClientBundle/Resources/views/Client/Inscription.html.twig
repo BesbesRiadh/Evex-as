@@ -1,0 +1,32 @@
+{% extends '::frontBase.html.twig' %}
+
+{% block subtitle %}Inscription-{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <!--=== Content Part ===-->
+    <div class="log-reg-v3 content-md">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 margin-top-20">
+                    {% set formId = form.vars.id %}
+                    {{ form_start(form, {'attr' : { 'id' : formId ,'class': 'log-reg-block sky-form'}} ) }}
+                    <h2>Inscription</h2>
+                    {{ form_rest(form) }}
+                    <footer>
+                        <button class="btn-u btn-u-green btn-block margin-bottom-20" type="submit">Inscription </button>
+                    </footer>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent()}}
+{% endblock %}
+

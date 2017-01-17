@@ -1,0 +1,7 @@
+Client:
+    resource: "@EvexiasClientBundle/Controller/ClientController.php"
+    type:     annotation
+    
+Security:
+    resource: "@EvexiasClientBundle/Controller/SecurityController.php"
+    type:     annotation
